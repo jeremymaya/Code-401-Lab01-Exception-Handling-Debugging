@@ -60,7 +60,16 @@ namespace ExceptionHandlingDebugging
             {
                 sum += arr[i];
             }
-            return sum;
+
+            if (sum > 20)
+            {
+                return sum;
+
+            }
+            else
+            {
+                throw (new Exception($"Value of {sum} is too low."));
+            }
         }
         static int GetProduct(int[] arr, int num)
         {
