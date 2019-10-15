@@ -35,8 +35,11 @@ namespace ExceptionHandlingDebugging
             int[] numbers = new int[number];
             int[] populate = Populate(numbers);
             int sum = GetSum(populate);
+            Console.WriteLine(sum);
+            /*
             int product = GetProduct(populate, sum);
             decimal quotient = GetQuotient(product);
+            */
         }
 
         static int[] Populate(int[] arr)
@@ -52,8 +55,12 @@ namespace ExceptionHandlingDebugging
 
         static int GetSum(int[] arr)
         {
-            int num = 0;
-            return num;
+            int sum = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i];
+            }
+            return sum;
         }
         static int GetProduct(int[] arr, int num)
         {
