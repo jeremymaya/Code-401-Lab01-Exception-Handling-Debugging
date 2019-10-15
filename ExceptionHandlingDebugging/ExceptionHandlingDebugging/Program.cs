@@ -35,11 +35,13 @@ namespace ExceptionHandlingDebugging
             int[] numbers = new int[number];
             int[] populate = Populate(numbers);
             int sum = GetSum(populate);
-            Console.WriteLine(sum);
             int product = GetProduct(populate, sum);
-            
-            GetQuotient(product);
-            
+            decimal quotient = GetQuotient(product);
+
+            Console.WriteLine($"Your array size is: {number}");
+            Console.WriteLine("The numbers in the array are " + string.Join(",", numbers) + "");
+            Console.WriteLine($"The sum of the array is {sum}");
+            Console.WriteLine($"{product} / {product/quotient} = {quotient}");
         }
 
         static int[] Populate(int[] arr)
@@ -68,7 +70,7 @@ namespace ExceptionHandlingDebugging
             }
             else
             {
-                throw (new Exception($"Value of {sum} is too low."));
+                throw (new Exception($"Value of {sum} is too low"));
             }
         }
         static int GetProduct(int[] arr, int num)
@@ -96,7 +98,7 @@ namespace ExceptionHandlingDebugging
                 decimal quotient = decimal.Divide(num, Convert.ToInt32(input));
                 return quotient;
             }
-            catch()
+            catch
             {
                 return 0;
             }
