@@ -37,9 +37,9 @@ namespace ExceptionHandlingDebugging
             int sum = GetSum(populate);
             Console.WriteLine(sum);
             int product = GetProduct(populate, sum);
-            /*
-            decimal quotient = GetQuotient(product);
-            */
+            
+            GetQuotient(product);
+            
         }
 
         static int[] Populate(int[] arr)
@@ -75,12 +75,13 @@ namespace ExceptionHandlingDebugging
         {
             Console.WriteLine($"Please select a random number between 1 and {arr.Length}");
             string input = Console.ReadLine();
+
             try
             {
-                int product = num * arr[Convert.ToInt32(input)];
+                int product = num * arr[Convert.ToInt32(input) - 1];
                 return product;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 throw e;
             }
@@ -88,8 +89,17 @@ namespace ExceptionHandlingDebugging
 
         static decimal GetQuotient(int num)
         {
-            decimal deci = 0;
-            return deci;
+            Console.WriteLine($"Please enter a number to divde your product {num} by");
+            string input = Console.ReadLine();
+            try
+            {
+                decimal quotient = decimal.Divide(num, Convert.ToInt32(input));
+                return quotient;
+            }
+            catch()
+            {
+                return 0;
+            }
         }
     }
 }
