@@ -36,8 +36,8 @@ namespace ExceptionHandlingDebugging
             int[] populate = Populate(numbers);
             int sum = GetSum(populate);
             Console.WriteLine(sum);
-            /*
             int product = GetProduct(populate, sum);
+            /*
             decimal quotient = GetQuotient(product);
             */
         }
@@ -73,7 +73,17 @@ namespace ExceptionHandlingDebugging
         }
         static int GetProduct(int[] arr, int num)
         {
-            return num;
+            Console.WriteLine($"Please select a random number between 1 and {arr.Length}");
+            string input = Console.ReadLine();
+            try
+            {
+                int product = num * arr[Convert.ToInt32(input)];
+                return product;
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
         }
 
         static decimal GetQuotient(int num)
