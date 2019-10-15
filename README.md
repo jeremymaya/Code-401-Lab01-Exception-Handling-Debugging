@@ -39,11 +39,9 @@ Then select and open ```ExceptionHandlingDebugging.sln```
 
 ### Visuals
 #### Application Start
-![Image 1](https://via.placeholder.com/750x500)
-#### Using the Application
-![Image 1](https://via.placeholder.com/750x500)
-#### Application End
-![Image 1](https://via.placeholder.com/750x500)
+![Image 1](https://github.com/jeremymaya/Code-401-Lab01-Exception-Handling-Debugging/blob/master/Screenshots/Start.JPG)
+#### Using the Application and Result
+![Image 1](https://github.com/jeremymaya/Code-401-Lab01-Exception-Handling-Debugging/blob/master/Screenshots/Result.JPG)
 
 ---
 
