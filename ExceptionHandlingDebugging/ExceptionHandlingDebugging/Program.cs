@@ -41,6 +41,12 @@ namespace ExceptionHandlingDebugging
 
         static int[] Populate(int[] arr)
         {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine($"Please enter number: {i + 1}/{arr.Length}");
+                string input = Console.ReadLine();
+                arr[i] = Convert.ToInt32(input);
+            }
             return arr;
         }
 
