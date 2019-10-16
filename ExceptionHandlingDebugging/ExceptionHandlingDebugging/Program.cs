@@ -53,9 +53,9 @@ namespace ExceptionHandlingDebugging
             {
                 Console.WriteLine("The number you entered is too big");
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                throw e;
+                throw;
             }
         }
         /// <summary>
@@ -112,9 +112,9 @@ namespace ExceptionHandlingDebugging
                 int product = num * arr[Convert.ToInt32(input) - 1];
                 return product;
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                throw e;
+                throw;
             }
         }
         /// <summary>
